@@ -3,6 +3,7 @@ import { View, Text } from 'react-native';
 import ClienteView from './Clientes/ClienteView'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import styles from './Common/Styles'
+import SearchBar from './SearchBar'
 
 export default class NavigationView extends Component {
     render() {
@@ -13,6 +14,7 @@ export default class NavigationView extends Component {
                     <Text style={styles.titleNav}>Clientes</Text>
                     <Icon name='filter' size={25} style={styles.iconNav}></Icon>
                 </View>
+                <SearchBar ></SearchBar>
                 <ClienteView></ClienteView>
             </View>
             

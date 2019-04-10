@@ -78,6 +78,32 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 19,
         fontWeight: 'bold',
+    },
+    tableView: {
+        backgroundColor: 'white',
+        flex: 1,
+        marginBottom: 20,
+        marginHorizontal: 8,
+        padding: 3,
+    },
+    titleClienteCell: {
+        fontSize: 18,
+        color: '#0D4B80',
+        fontWeight: 'bold',
+        marginTop: 8,
+
+    },
+    textClienteCell: {
+        fontSize: 17,
+        color: '#333',
+    },
+    search: {
+        backgroundColor: '#0D4B80',
+    },
+    searchText: {
+        backgroundColor: 'white',
+        color: '#333',
+
     }
 })
 

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { View, FlatList } from 'react-native'
+import ActionButton from 'react-native-action-button'
+
 
 import ClienteCell from './ClienteCell'
 import styles from '../Common/Styles'
@@ -59,10 +61,11 @@ export default class ClienteView extends Component {
     }
     render() {
         return (
-            <View>
+            <View style={ styles.tableView }>
                 <FlatList data={this.state.clients} keyExtractor={item => `${item.id}`} renderItem={({ item }) => <ClienteCell {...item}></ClienteCell>}>
 
                 </FlatList>
+                <ActionButton buttonColor={'#0D4B80'} onPress={() => {  }}/>
             </View>
         )
     }
