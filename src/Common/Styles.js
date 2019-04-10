@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Platform } from 'react-native'
 
 const styles = StyleSheet.create({
     rodape: {
@@ -61,6 +61,23 @@ const styles = StyleSheet.create({
     image: {
         height: "50%",
         resizeMode: 'contain'
+    },
+    header: {
+        height: 45,
+        backgroundColor: '#66C1CB',
+        marginTop: 44,
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+        paddingHorizontal: 5,
+    },
+    iconNav: {
+        color: 'white',
+    },
+    titleNav: {
+        color: 'white',
+        fontSize: 19,
+        fontWeight: 'bold',
     }
 })
 
