@@ -11,6 +11,12 @@ import TextField from './TextField'
 import Button from './Button'
 
 export default class App extends Component {
+
+  signin = () => {
+    this.props.navigation.navigate('Home')
+
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -26,7 +32,7 @@ export default class App extends Component {
                 <Icon name='lock' size={30} style={styles.icon} />
                 <TextField placeholder="Senha" secureTextEntry></TextField>
             </View>
-            <Button></Button>
+            <Button action={this.signin}></Button>
             
         </View>
         <View style={styles.rodape}>

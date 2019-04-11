@@ -4,6 +4,6 @@ import styles from './Common/Styles'
 
 export default props => {
     return (
-        <SearchBar inputStyle={styles.searchText} containerStyle={styles.search}></SearchBar>
+        <SearchBar buttonStyle={{ backgroundColor: 'white', }} inputStyle={styles.searchText} containerStyle={styles.search}></SearchBar>
     )
 }

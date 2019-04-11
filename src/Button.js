@@ -5,7 +5,7 @@ import styles from './Common/Styles'
 export default props => {
     return (
         <View style={styles.buttonContainer}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => props.action()}>
                 <Text style={styles.button}>ENTRAR</Text>
             </TouchableOpacity>
         </View>
