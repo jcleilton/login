@@ -7,6 +7,7 @@ import {
     AsyncStorage,
     TouchableOpacity
 } from 'react-native'
+import colors from './Common/colors'
 
 import { DrawerItems } from 'react-navigation'
 import Icon from 'react-native-vector-icons/FontAwesome'
@@ -18,7 +19,7 @@ export default props => {
     }
 
     return (
-        <ScrollView>
+        <ScrollView style={{backgroundColor: colors.mainColor,}}>
             <View style={styles.header}>
                 <Text style={styles.title}>SBVendas</Text>
                 
@@ -29,7 +30,7 @@ export default props => {
                     </View>
                     <TouchableOpacity onPress={logout}>
                         <View style={styles.logoutButton}>
-                            <Icon name='sign-out' size={30} color='#800'></Icon>
+                            <Icon name='sign-out' size={30} color='#FFF'></Icon>
                         </View>
                     </TouchableOpacity>
                 </View>
@@ -46,8 +47,7 @@ const styles = StyleSheet.create({
         borderColor: '#DDD',
     },
     title: {
-        backgroundColor: '#FFF',
-        color: '#000',
+        color: '#FFF',
         fontSize: 30,
         paddingTop: 30,
         padding: 10,
@@ -65,12 +65,12 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     name: {
-        color: 'black',
+        color: '#FFF',
         fontSize: 20,
         marginLeft: 10,
     },
     email: {
-        color: 'blue',
+        color: '#FFF',
         fontSize: 15,
         marginLeft: 10,
         marginBottom: 10,

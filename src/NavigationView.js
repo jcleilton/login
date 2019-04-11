@@ -14,7 +14,7 @@ export default class NavigationView extends Component {
                     <TouchableOpacity onPress={() => this.props.navigation.openDrawer()}>
                         <Icon name='bars' size={25} style={styles.iconNav}></Icon>
                     </TouchableOpacity>
-                    <Text style={styles.titleNav}>Clientes</Text>
+                    <Text style={styles.titleNav}>{this.props.title}</Text>
                     <Icon name='filter' size={25} style={styles.iconNav}></Icon>
                 </View>
                 <SearchBar ></SearchBar>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyleSheet, Platform } from 'react-native'
+import colors from './colors'
 
 const styles = StyleSheet.create({
     rodape: {
@@ -12,7 +13,7 @@ const styles = StyleSheet.create({
     },
     buttonContainer: {
         marginTop: 50,
-        backgroundColor: '#66C1CB',
+        backgroundColor: colors.secondaryColor,
         width: 180,
         height: 40,
         alignItems: 'center',
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
-        backgroundColor: '#0D4B80',
+        backgroundColor: colors.mainColor,
     },
     super: {
         flex: 1,
@@ -64,7 +65,7 @@ const styles = StyleSheet.create({
     },
     header: {
         height: 45,
-        backgroundColor: '#66C1CB',
+        backgroundColor: colors.secondaryColor,
         marginTop: 44,
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -88,7 +89,7 @@ const styles = StyleSheet.create({
     },
     titleClienteCell: {
         fontSize: 18,
-        color: '#0D4B80',
+        color: colors.mainColor,
         fontWeight: 'bold',
         marginTop: 8,
 
@@ -98,7 +99,7 @@ const styles = StyleSheet.create({
         color: '#333',
     },
     search: {
-        backgroundColor: '#0D4B80',
+        backgroundColor: colors.mainColor,
     },
     searchText: {
         backgroundColor: 'white',

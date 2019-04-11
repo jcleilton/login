@@ -38,11 +38,13 @@ const MenuConfig = {
   contentComponent: Menu,
   contentOptions: {
     labelStyle: {
+      color: '#ccc',
       fontWeight: 'normal',
       fontSize: 20,
     },
     activeLabelStyle: {
-      color: '#080'
+      color: '#FFF',
+      fontWeight: 'bold',
     }
   }
 }
