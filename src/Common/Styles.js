@@ -105,7 +105,28 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         color: '#333',
 
+    },
+    upHome: {
+        height: '35%',
+        backgroundColor: 'white',
+        margin: 8,
+        borderRadius: 4,
+    },
+    downHome: {
+        height: '55%',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+    downHomeOne: {
+        flex: 1,
+        height: '100%',
+        backgroundColor: colors.secondaryColor,
+        marginVertical: 8,
+        marginHorizontal: 8,
+        borderRadius: 4,
     }
+
 })
 
 export default styles
