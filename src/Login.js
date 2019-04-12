@@ -4,7 +4,8 @@ import {
     Text,
     Image,
     KeyboardAvoidingView,
-    Keyboard
+    Keyboard,
+    Platform
 } from 'react-native'
 import { connect } from 'react-redux'
 import { login } from './store/actions/user'
@@ -54,7 +55,7 @@ class App extends Component {
           <View style={styles.super}>
               <Image source={image} style={styles.image}></Image>
           </View>
-          <KeyboardAvoidingView behavior="padding" style={styles.sub}>
+          <KeyboardAvoidingView behavior= {Platform.OS === 'ios' ? 'padding' : 'height'} style={styles.sub}>
               <View style={styles.textBox}>
                   <Icon name='user' size={30} style={styles.icon} />
                   <TextField onChangeText={this.onChangeEmail} onFocus={() => this.onFocus(true)} onEndEditing={() => this.onFocus(false)} placeholder="Usuário"></TextField>
