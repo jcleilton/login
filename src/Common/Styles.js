@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     header: {
         height: 45,
         backgroundColor: colors.secondaryColor,
-        marginTop: 44,
+        marginTop: Platform.OS === 'ios' ? 44 : 0,
         alignItems: 'center',
         justifyContent: 'space-between',
         flexDirection: 'row',
@@ -74,6 +74,8 @@ const styles = StyleSheet.create({
     },
     iconNav: {
         color: 'white',
+        height: 25,
+        width: 25,
     },
     titleNav: {
         color: 'white',

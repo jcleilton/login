@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 import {
   createAppContainer,
   createSwitchNavigator,
   createDrawerNavigator
 } from 'react-navigation'
+import { connect } from 'react-redux'
+import { logout } from './src/store/actions/user'
 
 import NavigationView from './src/NavigationView'
 import Login from './src/Login'
@@ -12,7 +14,7 @@ import Menu from './src/Menu'
 const MenuRoutes = {
   Home: {
     name: 'Home',
-    screen: props => <NavigationView title='Home' index={0} {...props}></NavigationView>,
+    screen: props => <NavigationView  title='Home' index={0} {...props}></NavigationView>,
     navigationOptions: {
       title: 'Home'
     }
@@ -34,7 +36,7 @@ const MenuRoutes = {
 }
 
 const MenuConfig = {
-  initialRouteName: 'Home',
+  initialRouteName: 'Clientes',
   contentComponent: Menu,
   contentOptions: {
     labelStyle: {
@@ -63,9 +65,35 @@ const MainRoutes = {
 }
 
 const MainNavigator = createSwitchNavigator(MainRoutes, {
-  initialRouteName: 'Login'
+  initialRouteName: 'Login',
+  
 })
 
 const AppContainer = createAppContainer(MainNavigator)
 
-export default AppContainer
+const mapStateToProps = ({user}) => {
+  return {
+      email: user.email,
+      name: user.name
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+      onLogout: () => dispatch(logout())
+  }
+}
+
+class MyApp extends Component {
+  state = {
+    ...this.props
+  }
+  onLogout = () => {
+    this.props.onLogout()
+  }
+  render() {
+    return <AppContainer {...this.props}></AppContainer>
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MyApp)
